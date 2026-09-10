@@ -18,6 +18,220 @@ html {
   --dark-background-color: #000000;
 }
 
+body {
+  letter-spacing: 0;
+}
+
+.prism-font {
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+.prism-login-shell {
+  overflow-x: hidden;
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 94%), rgb(247 248 244 / 94%)),
+    repeating-linear-gradient(90deg, transparent 0 79px, rgb(18 20 19 / 4%) 79px 80px);
+}
+
+.dark .prism-login-shell {
+  background:
+    linear-gradient(90deg, rgb(14 15 16 / 97%), rgb(22 23 22 / 97%)),
+    repeating-linear-gradient(90deg, transparent 0 79px, rgb(255 255 255 / 4%) 79px 80px);
+}
+
+.prism-login-frame {
+  animation: prism-enter 420ms ease-out both;
+}
+
+.prism-login-card {
+  overflow: hidden;
+  border: 1px solid rgb(20 22 20 / 12%);
+  border-radius: 8px !important;
+  background: #fff !important;
+  box-shadow: 0 28px 80px rgb(25 28 24 / 12%);
+  padding: 0 !important;
+}
+
+.dark .prism-login-card {
+  border-color: rgb(255 255 255 / 12%);
+  background: #141615 !important;
+  box-shadow: 0 28px 80px rgb(0 0 0 / 36%);
+}
+
+.prism-login-intro {
+  position: relative;
+  overflow: hidden;
+  color: #f6f7ef;
+  background: #171a18;
+}
+
+.prism-login-intro::after {
+  position: absolute;
+  right: -54px;
+  bottom: -76px;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgb(217 227 75 / 34%);
+  border-radius: 50%;
+  content: "";
+}
+
+.prism-login-intro h1,
+.prism-login-intro p {
+  color: inherit !important;
+}
+
+.prism-login-intro h1 {
+  max-width: 10ch;
+  font-size: 40px !important;
+  font-weight: 900;
+}
+
+.prism-login-intro p {
+  color: rgb(246 247 239 / 68%) !important;
+}
+
+.prism-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #171a18;
+}
+
+.prism-login-intro .prism-brand {
+  color: #f6f7ef;
+}
+
+.prism-brand__mark {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 8px;
+  color: #171a18;
+  background: #d9e34b;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.prism-brand__name {
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.prism-brand__product {
+  padding-left: 10px;
+  border-left: 1px solid currentColor;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.58;
+  text-transform: uppercase;
+}
+
+.prism-login-trust {
+  position: relative;
+  z-index: 1;
+  color: rgb(246 247 239 / 56%);
+  font-size: 12px;
+}
+
+.prism-login-form h1 {
+  text-align: left;
+}
+
+.prism-login-form button[type="submit"] {
+  min-width: 112px;
+  min-height: 40px;
+  justify-content: center;
+  border-color: #171a18;
+  color: #171a18;
+  background: #d9e34b;
+  box-shadow: none;
+}
+
+.prism-login-form button[type="submit"]:hover:not(:disabled) {
+  background: #c9d33d;
+}
+
+.prism-error-panel {
+  display: grid;
+  width: min(100%, 480px);
+  gap: 32px;
+  padding: 40px;
+  border: 1px solid rgb(20 22 20 / 12%);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 28px 80px rgb(25 28 24 / 12%);
+}
+
+.dark .prism-error-panel {
+  border-color: rgb(255 255 255 / 12%);
+  background: #141615;
+}
+
+.prism-error-panel h1 {
+  margin-top: 8px;
+  color: #171a18;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.dark .prism-error-panel h1 {
+  color: #f6f7ef;
+}
+
+.prism-error-panel p:not(.prism-error-panel__eyebrow) {
+  margin-top: 12px;
+  color: #68706b;
+  line-height: 1.6;
+}
+
+.prism-error-panel__eyebrow {
+  color: #7c850f;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.prism-error-panel button {
+  width: fit-content;
+  min-height: 40px;
+  color: #171a18;
+  background: #d9e34b;
+  box-shadow: none;
+}
+
+@keyframes prism-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prism-login-frame {
+    animation: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .prism-login-shell {
+    justify-content: flex-start;
+  }
+  .prism-login-frame {
+    padding-top: 24px;
+  }
+  .prism-login-card {
+    border-radius: 8px !important;
+  }
+}
+
 .form-checkbox {
   position: relative;
 }
